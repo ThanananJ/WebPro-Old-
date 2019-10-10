@@ -15,7 +15,7 @@ public class Student {
     private String password;
     private String firstName;
     private String lastName;
-    private String level;
+    private String classId;
 
     public String getUserName() {
         return userName;
@@ -49,12 +49,12 @@ public class Student {
         this.lastName = lastName;
     }
 
-    public String getLevel() {
-        return level;
+    public String getClassId() {
+        return classId;
     }
 
-    public void setLevel(String level) {
-        this.level = level;
+    public void seClassId(String level) {
+        this.classId = level;
     }
     
     
