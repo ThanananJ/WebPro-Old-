@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Model;
+package quinn.model;
 
 /**
  *
  * @author Mark
  */
-public class Exam {
+public class Question {
     
 }
