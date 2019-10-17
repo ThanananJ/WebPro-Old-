@@ -11,6 +11,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import quinn.model.Student;
+import quinn.model.StudentController;
 
 /**
  *
@@ -30,6 +32,19 @@ public class LoginServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        String std_id = request.getParameter("username");
+        String password = request.getParameter("password");
+        String message = "";
+        if(std_id.trim().length() > 0){
+            StudentController sc = new StudentController();
+            Student user = sc.findByStudentId(std_id);
+            if(user == null){
+                message = "Invalid User";
+                request.getRequestDispatcher("/index.jsp");
+            }
+            
+        }
+        
         
     }
 

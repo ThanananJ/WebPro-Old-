@@ -66,7 +66,7 @@
                             <p class="text" style="font-size: 30px">Username : </p>
                         </td>
                         <td>
-                            <input class="input-field" type="text" placeholder="Username" name="usrnm">
+                            <input class="input-field" type="text" placeholder="Student id" name="username">
                         </td>
                     </tr>
                     <tr>
@@ -74,7 +74,7 @@
                             <p class="text" style="font-size: 30px">Password : </p>
                         </td>
                         <td>
-                            <input class="input-field" type="password" placeholder="Password" name="psw">
+                            <input class="input-field" type="password" placeholder="Password" name="password">
                         </td>
                     </tr>
                     <tr>
