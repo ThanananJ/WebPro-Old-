@@ -34,20 +34,25 @@
         /* Style the input container */
         .input-container {
             display: flex;
-            width: 400px;
+            width: 1000px;
             margin-bottom: 15px;
         }
 
         /* Style the input fields */
         .input-field {
-            width: 100%;
+            width: 400px;
             padding: 10px;
             outline: none;
+            border: transparent;
+            background-image: url(./images/inputbox.png);
+            font-family: Advent Pro;
+            font-size: 20px;
+            color: white
         }
 
 
         .text{
-            font-family: Prompt;
+            font-family: Advent Pro;
             font-weight: lighter;
         }
     </style>
@@ -58,7 +63,7 @@
                 <table style="float: right; margin: 50px 50px 0px 0px">
                     <tr>
                         <td>
-                            <p class="text">Username : </p>
+                            <p class="text" style="font-size: 30px">Username : </p>
                         </td>
                         <td>
                             <input class="input-field" type="text" placeholder="Username" name="usrnm">
@@ -66,7 +71,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <p class="text">Password : </p>
+                            <p class="text" style="font-size: 30px">Password : </p>
                         </td>
                         <td>
                             <input class="input-field" type="password" placeholder="Password" name="psw">
@@ -74,8 +79,8 @@
                     </tr>
                     <tr>
                         <td></td>
-                        <td>
-                            <button type="submit" style="border: 0; background: transparent">
+                        <td style="text-align: right">
+                            <button type="submit" style="border: 0; background: transparent;">
                                 <img src="./images/loginbtn.png" width="90" height="auto" alt="submit" />
                             </button>
                         </td>

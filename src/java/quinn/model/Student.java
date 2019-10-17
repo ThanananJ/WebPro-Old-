@@ -17,6 +17,15 @@ public class Student {
     private String lastName;
     private String classId;
 
+    public Student(String userName, String password, String firstName, String lastName, String classId) {
+        this.userName = userName;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.classId = classId;
+    }
+
+    
     public String getUserName() {
         return userName;
     }
@@ -56,7 +65,6 @@ public class Student {
     public void seClassId(String level) {
         this.classId = level;
     }
-    
-    
+  
     
 }
