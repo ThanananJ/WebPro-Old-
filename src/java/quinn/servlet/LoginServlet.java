@@ -11,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import quinn.model.Student;
 import quinn.model.StudentController;
 
@@ -35,17 +36,29 @@ public class LoginServlet extends HttpServlet {
         String std_id = request.getParameter("username");
         String password = request.getParameter("password");
         String message = "";
-        if(std_id.trim().length() > 0){
+        HttpSession session = request.getSession();
+        if (std_id.trim().length() > 0) {
             StudentController sc = new StudentController();
             Student user = sc.findByStudentId(std_id);
-            if(user == null){
+            if (user == null) {
                 message = "Invalid User";
-                request.getRequestDispatcher("/index.jsp");
+                request.setAttribute("message", message);
+                request.getRequestDispatcher("/login.jsp").forward(request, response);
             }
-            
+            if (password.length() > 0) {
+                if (!password.equals(user.getPassword())) {
+                    session.setAttribute("user", user);
+                    request.getRequestDispatcher("/index.jsp").forward(request, response);
+                }
+                message = "Invalid Username or Password";
+                request.setAttribute("message", message);
+                request.getRequestDispatcher("/login.jsp").forward(request, response);
+            }
         }
-        
-        
+        message = "Invalid Username or Password!!";
+        request.setAttribute("message", message);
+        request.getRequestDispatcher("/login.jsp").forward(request, response);
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -60,7 +73,7 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        request.getRequestDispatcher("/login.jsp").forward(request, response);
     }
 
     /**

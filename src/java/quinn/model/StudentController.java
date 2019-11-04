@@ -18,7 +18,6 @@ import quinn.db.BuildConnection;
  * @author nattawanee.sks
  */
 public class StudentController {
-    public static String FINDBY = "select * from student where ? LIKE ? ;";
     
     public static Student findByStudentId(String studentId){
         Student s = null;
@@ -38,7 +37,7 @@ public class StudentController {
         }
         return s;
     }
-
+    
     public static void main(String[] args) {
         Student s = findByStudentId("00001");
         System.out.println(s.getFirstName());

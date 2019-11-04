@@ -50,7 +50,6 @@
             color: white
         }
 
-
         .text{
             font-family: Advent Pro;
             font-weight: lighter;
@@ -59,7 +58,7 @@
     <body class="bg">
         <div style="text-align: right;margin: 50px 50px 0px 0px"><img src="./images/logo.png" width="400px" height="auto"></div>
 
-            <form action="Login">
+        <form action="Login" method="post">
                 <table style="float: right; margin: 50px 50px 0px 0px">
                     <tr>
                         <td>
@@ -84,6 +83,10 @@
                                 <img src="./images/loginbtn.png" width="90" height="auto" alt="submit" />
                             </button>
                         </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><p class="text" style="text-align: right; color: red;font-size: 30px">${message}</p></td>
                     </tr>
                 </table>
             </form>
