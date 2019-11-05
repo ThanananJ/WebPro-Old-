@@ -16,7 +16,7 @@ import java.util.logging.Logger;
  * @author nattawanee.sks
  */
 public class BuildConnection {
-    private static final String URL = "jdbc:derby://localhost:1527/testing";
+    private static final String URL = "jdbc:derby://localhost:1527/QuinnDB";
     private static final String USERNAME = "admin1";
     private static final String PASSWORD = "12345";
     
