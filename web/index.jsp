@@ -13,6 +13,6 @@
     <body>
         <div class="container-fluid">
             <jsp:include page="/WEB-INF/view/PageHeader.jsp?title=Home Page"/>
-
+        </div>
     </body>
 </html>
