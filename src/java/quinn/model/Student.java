@@ -17,7 +17,7 @@ public class Student {
     private String lastName;
     private String classId;
 
-    public Student(String userName, String password, String firstName, String lastName, String classId) {
+    public Student(String userName, String firstName, String lastName, String password, String classId) {
         this.userName = userName;
         this.password = password;
         this.firstName = firstName;
@@ -72,7 +72,8 @@ public class Student {
     
     public static void main(String[] args) {
         StudentController sc = new StudentController();
-        Student s = sc.findByStudentId("00001");
+        String username = "00001";
+        Student s = sc.findByStudentId(username);
         System.out.println(s.equalPassword("12345"));
     }
 }

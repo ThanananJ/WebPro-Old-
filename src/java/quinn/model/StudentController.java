@@ -40,6 +40,6 @@ public class StudentController {
     
     public static void main(String[] args) {
         Student s = findByStudentId("00001");
-        System.out.println(s.getFirstName());
+        System.out.println(s.getPassword());
     }
 }

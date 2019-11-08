@@ -32,33 +32,30 @@ public class LoginServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        String std_id = request.getParameter("username");
         String password = request.getParameter("password");
-        String message = "";
-        HttpSession session = request.getSession();
-        if (std_id.trim().length() > 0) {
+        String username = request.getParameter("username");
+
+        if (username.trim().length() > 0 && password.trim().length() > 0) {
             StudentController sc = new StudentController();
-            Student user = sc.findByStudentId(std_id);
-            if (user == null) {
-                message = "Invalid User";
-                request.setAttribute("message", message);
-                request.getRequestDispatcher("/login.jsp").forward(request, response);
-            }
-            if (password.length() > 0) {
-                if (!password.equals(user.getPassword())) {
+            Student user = sc.findByStudentId(username);
+            if (user != null) {
+                System.out.print(password);
+                if (user.getPassword().equals((String)password)) {
+                    HttpSession session = request.getSession();
                     session.setAttribute("user", user);
                     request.getRequestDispatcher("/index.jsp").forward(request, response);
+                } else {
+                    request.setAttribute("message", "Invalid Password");
+                    request.getRequestDispatcher("/login.jsp").forward(request, response);
                 }
-                message = "Invalid Username or Password";
-                request.setAttribute("message", message);
+            } else {
+                request.setAttribute("message", "Invalid Username");
                 request.getRequestDispatcher("/login.jsp").forward(request, response);
             }
+        } else {
+            request.setAttribute("message", "Invalid Username or Password!!");
+            request.getRequestDispatcher("/login.jsp").forward(request, response);
         }
-        message = "Invalid Username or Password!!";
-        request.setAttribute("message", message);
-        request.getRequestDispatcher("/login.jsp").forward(request, response);
-
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
