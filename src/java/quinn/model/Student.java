@@ -5,6 +5,8 @@
  */
 package quinn.model;
 
+import quinn.controller.StudentController;
+
 /**
  *
  * @author Mark

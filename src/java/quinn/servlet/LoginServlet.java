@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import quinn.model.Student;
-import quinn.model.StudentController;
+import quinn.controller.StudentController;
 
 /**
  *
