@@ -4,12 +4,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Page Header</title>
+        <link href="https://fonts.googleapis.com/css?family=Advent+Pro&display=swap" rel="stylesheet">
         <style>
             .navbar {
                 background-color: #D3E8E1;
                 margin: auto;
                 padding: 10px;
                 width: 100%;
+                height:100%;
             }
 
             .nav a {
@@ -35,8 +37,8 @@
             <a href = "./index.jsp"> <img src="./images/logo.png" alt="logo" height="70px"></a>
             <div class ="nav">
                 <ul>
-                    <li><a href="/index.jsp">Classroom</a></li>
-                    <li ><a href="/index.jsp">Contact us</a></li>
+                    <li><a href="/index.jsp">My Profile</a></li>
+                    <li ><a href="./login.jsp">Logout</a></li>
                 </ul>
             </div>
         </div>
