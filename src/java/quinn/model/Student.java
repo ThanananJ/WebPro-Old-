@@ -62,9 +62,17 @@ public class Student {
         return classId;
     }
 
-    public void seClassId(String level) {
+    public void setClassId(String level) {
         this.classId = level;
     }
   
+    public boolean equalPassword(String password){
+        return password.equals(this.password);
+    }
     
+    public static void main(String[] args) {
+        StudentController sc = new StudentController();
+        Student s = sc.findByStudentId("00001");
+        System.out.println(s.equalPassword("12345"));
+    }
 }
