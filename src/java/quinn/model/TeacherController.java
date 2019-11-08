@@ -18,27 +18,28 @@ import quinn.db.BuildConnection;
  * @author nattawanee.sks
  */
 public class TeacherController {
-    public static Student findByTeacherId(String studentId){
-        Student s = null;
+    public static Teacher findByTeacherId(String teacherId){
+        Teacher t = null;
         Connection conn = BuildConnection.getConnection();
         try {
             PreparedStatement pstm = conn.prepareStatement("select * from teacher where t_id = ?");
-            pstm.setString(1, studentId);
+            pstm.setString(1, teacherId);
             ResultSet rs = null;
             rs = pstm.executeQuery();
             if(rs.next()){
-                s = new Student(rs.getString("t_id"),rs.getString("f_name"),rs.getString("l_name"),rs.getString("password"),rs.getString("class_id"));
+                t = new Teacher(rs.getString("t_id"),rs.getString("f_name"),rs.getString("l_name"),rs.getString("password"),rs.getString("class_id"));
             }
             rs.close();
             conn.close();
         } catch (SQLException ex) {
             Logger.getLogger(Student.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return s;
+        return t;
     }
     
     public static void main(String[] args) {
-        Student s = findByTeacherId("0001");
-        System.out.println(s.getFirstName());
+        TeacherController tc = new TeacherController();
+        Teacher t = tc.findByTeacherId("0001");
+        System.out.println(t.getPassword()); 
     }
 }
