@@ -11,6 +11,20 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <title>Searching</title>
         <style>
+
+            .bgimage{
+                /* The image used */
+                background-image: url(./images/bg.png);
+
+                /* Full height */
+                height: 100%;
+
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
             .bg{
                 font-family: Advent Pro;
             }
@@ -32,11 +46,12 @@
 
         </style>
     </head>
-    <body background="./images/bg.png" width="100%" height="100%">
+    <body class="bgimage">
         <jsp:include page="/WEB-INF/view/PageHeader.jsp?title=Home Page"/>
         <div class="bg">
             <h1 style="text-align: center; color: #997B5E; font-size: 96px;">Result of English Quiz</h1>
         </div>
+    <center>
         <div class ="table">
             <table id="tb1">
                 <tr>
@@ -44,8 +59,9 @@
                     <th> </th>
                     <th style="background-color:#997B5E">7 </th>
                 </tr>
- 
-                </table>
+
+            </table>
         </div>
-    </body>
+    </center>
+</body>
 </html>

@@ -10,30 +10,44 @@
         <link href="https://fonts.googleapis.com/css?family=Advent+Pro&display=swap" rel="stylesheet">
         <jsp:include page="/WEB-INF/view/PageHeader.jsp?title=Home Page"/>
         <title>Announcement</title>
+        <style>
+            .bgimage{
+                /* The image used */
+                background-image: url(./images/bg.png);
+
+                /* Full height */
+                height: 100%;
+
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
     </head>
     <body background= "./images/bg.png" width="100%" height="100%">
         <div class="bg">
-<table border="1" width="70%" height="90%" align="center" cellpadding ="9px">
-                    <tr bgcolor="#EBE4D1">
-                        <th>1</th>
-                    </tr>
-                    <tr bgcolor="DEC7A4">
-                        <td>2</td>
-                    </tr>
-                    <tr bgcolor="#EBE4D1">
-                        <td>3</td>
-                    </tr>
-                    <tr bgcolor="#DEC7A4">
-                        <td>4</td>
-                    </tr>
-                     <tr bgcolor="#EBE4D1">
-                        <td>5</td>
-                    </tr>
-                     <tr bgcolor="DEC7A4">
-                        <td>6</td>
-                    </tr>
+            <table border="1" width="70%" height="90%" align="center" cellpadding ="9px">
+                <tr bgcolor="#EBE4D1">
+                    <th>1</th>
+                </tr>
+                <tr bgcolor="DEC7A4">
+                    <td>2</td>
+                </tr>
+                <tr bgcolor="#EBE4D1">
+                    <td>3</td>
+                </tr>
+                <tr bgcolor="#DEC7A4">
+                    <td>4</td>
+                </tr>
+                <tr bgcolor="#EBE4D1">
+                    <td>5</td>
+                </tr>
+                <tr bgcolor="DEC7A4">
+                    <td>6</td>
+                </tr>
 
-                </table>
+            </table>
         </div>
     </body>
 </html>
