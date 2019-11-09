@@ -11,23 +11,24 @@
         <jsp:include page="/WEB-INF/view/PageHeader.jsp?title=Home Page"/>
         <title>Announcement</title>
         <style>
-            .bgimage{
-                /* The image used */
-                background-image: url(./images/bg.png);
-
-                /* Full height */
-                height: 100%;
-
-                /* Center and scale the image nicely */
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
+            .all{
+                font-family: Advent Pro; 
             }
+            #announcement{
+                border: 1;
+                width: 90%;
+                height:50%;  
+                margin-top: 40px;
+                font-size: 24px;
+                color: #805B25;
+            }
+
         </style>
     </head>
     <body background= "./images/bg.png" width="100%" height="100%">
-        <div class="bg">
-            <table border="1" width="70%" height="90%" align="center" cellpadding ="9px">
+        <div class="all">
+            <h1 style="color:#997B5E; font-size: 96px; text-align: center;">Announcement</h1>
+            <table id ="announcement"align="center" cellpadding ="9px">
                 <tr bgcolor="#EBE4D1">
                     <th>1</th>
                 </tr>
@@ -46,7 +47,12 @@
                 <tr bgcolor="DEC7A4">
                     <td>6</td>
                 </tr>
-
+                <tr bgcolor="#EBE4D1">
+                    <td>7</td>
+                </tr>
+                <tr bgcolor="DEC7A4">
+                    <td>8</td>
+                </tr>
             </table>
         </div>
     </body>
