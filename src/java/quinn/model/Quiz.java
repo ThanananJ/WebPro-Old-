@@ -85,6 +85,11 @@ public class Quiz {
     public void setClassAllowToDo(String classAllowToDo) {
         this.classAllowToDo = classAllowToDo;
     }
+
+    @Override
+    public String toString() {
+        return "Quiz{" + "quiz_id=" + quiz_id + ", description=" + description + ", subject=" + subject + ", type=" + type + ", quizOwner=" + quizOwner + ", classAllowToDo=" + classAllowToDo + '}';
+    }
     
     
 }
