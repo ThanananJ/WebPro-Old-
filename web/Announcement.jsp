@@ -10,30 +10,50 @@
         <link href="https://fonts.googleapis.com/css?family=Advent+Pro&display=swap" rel="stylesheet">
         <jsp:include page="/WEB-INF/view/PageHeader.jsp?title=Home Page"/>
         <title>Announcement</title>
+        <style>
+            .all{
+                font-family: Advent Pro; 
+            }
+            #announcement{
+                border: 1;
+                width: 90%;
+                height:50%;  
+                margin-top: 40px;
+                font-size: 24px;
+                color: #805B25;
+            }
+
+        </style>
     </head>
     <body background= "./images/bg.png" width="100%" height="100%">
-        <div class="bg">
-<table border="1" width="70%" height="90%" align="center" cellpadding ="9px">
-                    <tr bgcolor="#EBE4D1">
-                        <th>1</th>
-                    </tr>
-                    <tr bgcolor="DEC7A4">
-                        <td>2</td>
-                    </tr>
-                    <tr bgcolor="#EBE4D1">
-                        <td>3</td>
-                    </tr>
-                    <tr bgcolor="#DEC7A4">
-                        <td>4</td>
-                    </tr>
-                     <tr bgcolor="#EBE4D1">
-                        <td>5</td>
-                    </tr>
-                     <tr bgcolor="DEC7A4">
-                        <td>6</td>
-                    </tr>
-
-                </table>
+        <div class="all">
+            <h1 style="color:#997B5E; font-size: 96px; text-align: center;">Announcement</h1>
+            <table id ="announcement"align="center" cellpadding ="9px">
+                <tr bgcolor="#EBE4D1">
+                    <th>1</th>
+                </tr>
+                <tr bgcolor="DEC7A4">
+                    <td>2</td>
+                </tr>
+                <tr bgcolor="#EBE4D1">
+                    <td>3</td>
+                </tr>
+                <tr bgcolor="#DEC7A4">
+                    <td>4</td>
+                </tr>
+                <tr bgcolor="#EBE4D1">
+                    <td>5</td>
+                </tr>
+                <tr bgcolor="DEC7A4">
+                    <td>6</td>
+                </tr>
+                <tr bgcolor="#EBE4D1">
+                    <td>7</td>
+                </tr>
+                <tr bgcolor="DEC7A4">
+                    <td>8</td>
+                </tr>
+            </table>
         </div>
     </body>
 </html>
